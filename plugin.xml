@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-storageinfo" version="0.0.1">
+    <name>StorageInfoPlugin</name>
+    <author>Claudio Barra</author>
+    <description>An Cross Platform Cordova plugin that allows users to get storage information.</description>
+    <license>MIT</license>
+    <keywords>cordova,android,storageinfo</keywords>
+    <repo>https://github.com/cb4rr/storageinfo-plugin-outsystems.git</repo>
+    <issue>https://github.com/cb4rr/storageinfo-plugin-outsystems/issues</issue>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <js-module src="www/storageinfoplugin.js" name="storageinfoPlugin">
+        <clobbers target="window.plugins.storageinfoPlugin" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="StorageInfoPlugin">
+                <param name="android-package" value="com.cb4rr.cordova.plugin.StorageInfoPlugin"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+        <source-file src="src/android/StorageInfoPlugin.java" target-dir="src/com/cb4rr/cordova/plugin" />
+    </platform>
+
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="StorageInfoPlugin">
+                <param name="ios-package" value="StorageInfoPlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/StorageInfoPlugin.h" />
+        <source-file src="src/ios/StorageInfoPlugin.m" />
+    </platform>
+</plugin>

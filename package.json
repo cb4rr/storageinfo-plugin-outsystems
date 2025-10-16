@@ -1,0 +1,33 @@
+{
+    "name": "cordova-plugin-storageinfo",
+    "version": "0.0.1",
+    "description": "An cross platform Cordova plugin that allows users to get storage information.",
+    "cordova": {
+      "id": "cordova-plugin-storageinfo",
+      "platforms": [
+        "android",
+        "ios"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/cb4rr/storageinfo-plugin-outsystems.git"
+    },
+    "keywords": [
+      "StorageInfo",
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "engines": [
+      {
+        "name": "cordova",
+        "version": ">=3.0.0"
+      }
+    ],
+    "author": "Claudio Barra <claudiobarragomez@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/cb4rr/storageinfo-plugin-outsystems/issues"
+    },
+    "homepage": "https://github.com/cb4rr/storageinfo-plugin-outsystems/"
+  }
